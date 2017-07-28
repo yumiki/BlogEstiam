@@ -147,7 +147,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1501229774074</updated>
-      <workItem from="1501229776646" duration="1208000" />
+      <workItem from="1501229776646" duration="1234000" />
     </task>
     <task id="LOCAL-00001" summary="update Readme">
       <created>1501230643020</created>
@@ -170,11 +170,18 @@
       <option name="project" value="LOCAL" />
       <updated>1501231008906</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="unversion .idea&#10;">
+      <created>1501231063443</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1501231063443</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1208000" />
+    <option name="totallyTimeSpent" value="1234000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
