@@ -21,7 +21,7 @@
 
         {% block header %}
             <header>
-                <div class="navbar navbar-default navbar-static-top" role="navigation">
+                <div class="navbar navbar-default navbar-static-top" role="navigation" id="nav-top">
                     <div class="container">
                         <div class="navbar-header">
                             <a class="navbar-brand" href="{{ path('homepage') }}">
@@ -46,7 +46,6 @@
                                             <i class="fa fa-home" aria-hidden="true"></i> {{ 'menu.homepage'|trans }}
                                         </a>
                                     </li>
-
                                     {% if is_granted('ROLE_ADMIN') %}
                                         <li>
                                             <a href="{{ path('admin_post_index') }}">
@@ -60,6 +59,12 @@
                                     <li>
                                         <a href="{{ path('security_logout') }}">
                                             <i class="fa fa-sign-out" aria-hidden="true"></i> {{ 'menu.logout'|trans }}
+                                        </a>
+                                    </li>
+                                {% else %}
+                                    <li>
+                                        <a href="{{ path('security_login') }}">
+                                            <i class="fa fa-sign-in" aria-hidden="true"></i> {{ 'action.sign_in'|trans }}
                                         </a>
                                     </li>
                                 {% endif %}
@@ -82,7 +87,7 @@
                 </div>
             </header>
         {% endblock %}
-
+        <img src="{{ asset('images/homepagebackground.jpg') }}" id="homepage-image" class="col-sm-12">
         <div class="container body-container">
             {% block body %}
                 <div class="row">

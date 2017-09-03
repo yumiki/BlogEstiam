@@ -235,6 +235,10 @@
                 <source>menu.post_list</source>
                 <target>Post list</target>
             </trans-unit>
+            <trans-unit id="menu.new_post">
+                <source>menu.new_post</source>
+                <target>New post</target>
+            </trans-unit>
             <trans-unit id="menu.back_to_blog">
                 <source>menu.back_to_blog</source>
                 <target>Back to blog</target>
