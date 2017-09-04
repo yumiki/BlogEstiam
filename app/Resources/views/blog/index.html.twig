@@ -35,8 +35,5 @@
 {% endblock %}
 
 {% block sidebar %}
-    {{ parent() }}
-
-    {{ show_source_code(_self) }}
     {{ include('blog/_rss.html.twig') }}
 {% endblock %}
