@@ -25,7 +25,7 @@
                     <div class="container">
                         <div class="navbar-header">
                             <a class="navbar-brand" href="{{ path('homepage') }}">
-                                Symfony Demo
+                                Blog de Ludo
                             </a>
 
                             <button type="button" class="navbar-toggle"
@@ -87,7 +87,10 @@
                 </div>
             </header>
         {% endblock %}
-        <img src="{{ asset('images/homepagebackground.jpg') }}" id="homepage-image" class="col-sm-12">
+        <figure>
+            <img src="{{ asset('images/homepagebackground.jpg') }}" id="homepage-image" class="col-sm-12">
+            <figcaption>Le blog de Ludovic</figcaption>
+        </figure>
         <div class="container body-container">
             {% block body %}
                 <div class="row">
@@ -105,19 +108,15 @@
                 <div class="container">
                     <div class="row">
                         <div id="footer-copyright" class="col-md-6">
-                            <p>&copy; {{ 'now'|date('Y') }} - The Symfony Project</p>
-                            <p>{{ 'mit_license'|trans }}</p>
+                            <p>&copy; {{ 'now'|date('Y') }} - Blog de ludovic</p>
                         </div>
                         <div id="footer-resources" class="col-md-6">
                             <p>
-                                <a href="https://twitter.com/symfony" title="Symfony Twitter">
+                                <a href="https://twitter.com" title="Twitter">
                                     <i class="fa fa-twitter" aria-hidden="true"></i>
                                 </a>
-                                <a href="https://www.facebook.com/SensioLabs" title="SensioLabs Facebook">
+                                <a href="https://www.facebook.com" title="Facebook">
                                     <i class="fa fa-facebook" aria-hidden="true"></i>
-                                </a>
-                                <a href="https://symfony.com/blog/" title="Symfony Blog">
-                                    <i class="fa fa-rss" aria-hidden="true"></i>
                                 </a>
                             </p>
                         </div>

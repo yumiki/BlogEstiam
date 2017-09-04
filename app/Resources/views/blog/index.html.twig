@@ -17,7 +17,10 @@
             </p>
 
             {{ post.summary|md2html }}
-
+            <p>
+                <i class="fa fa-comments" aria-hidden="true"></i> {{ 'post.num_comments'|transchoice(post.comments|length) }}
+            </p>
+            {#<p>{{ post.comments|length }}</p>#}
             {{ include('blog/_post_tags.html.twig') }}
         </article>
     {% else %}
