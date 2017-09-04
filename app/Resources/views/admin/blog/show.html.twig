@@ -17,6 +17,9 @@
     {{ post.content|md2html }}
 
     {{ include('blog/_post_tags.html.twig') }}
+
+    {{ include('admin/blog/_post_comments.html.twig') }}
+
 {% endblock %}
 
 {% block sidebar %}

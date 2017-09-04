@@ -133,6 +133,10 @@
                 <source>label.delete_post</source>
                 <target>Delete post</target>
             </trans-unit>
+            <trans-unit id="label.delete_comment">
+                <source>label.delete_comment</source>
+                <target>Delete comment</target>
+            </trans-unit>
             <trans-unit id="label.cancel">
                 <source>label.cancel</source>
                 <target>Cancel</target>

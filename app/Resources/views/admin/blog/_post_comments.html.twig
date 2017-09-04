@@ -1,0 +1,23 @@
+{% extends ':blog:_post_comments.html.twig' %}
+
+{% block comment_section %}
+<h4 class="col-sm-3">
+    <strong>{{ comment.author.fullName }}</strong> {{ 'post.commented_on'|trans }}
+    {# it's not mandatory to set the timezone in localizeddate(). This is done to
+       avoid errors when the 'intl' PHP extension is not available and the application
+       is forced to use the limited "intl polyfill", which only supports UTC and GMT #}
+    <strong>{{ comment.publishedAt|localizeddate('medium', 'short', null, 'UTC') }}</strong>
+</h4>
+<div class="col-sm-7">
+    {{ comment.content|md2html }}
+</div>
+<div class=col-sm-1">
+    <div style="float: right; display: block">
+            <span>
+                <a href="{{ path('admin_post_index') }}">
+                    <i class="fa fa-remove" aria-hidden="true"></i> {{ 'label.delete_comment'|trans }}
+                </a>
+            </span>
+    </div>
+</div>
+{% endblock %}
