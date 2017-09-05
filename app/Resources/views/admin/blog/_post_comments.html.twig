@@ -13,11 +13,19 @@
 </div>
 <div class=col-sm-1">
     <div style="float: right; display: block">
+
+        {{ include('admin/blog/_delete_comment_form.html.twig', {comment: comment}, with_context = false) }}
+    </div>
+        {#
+    <div style="float: right; display: block">
+
             <span>
                 <a href="{{ path('admin_post_index') }}">
                     <i class="fa fa-remove" aria-hidden="true"></i> {{ 'label.delete_comment'|trans }}
                 </a>
             </span>
+
     </div>
+    #}
 </div>
 {% endblock %}

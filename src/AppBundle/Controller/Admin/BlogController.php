@@ -11,6 +11,7 @@
 
 namespace AppBundle\Controller\Admin;
 
+use AppBundle\Entity\Comment;
 use AppBundle\Entity\Post;
 use AppBundle\Form\PostType;
 use AppBundle\Utils\Slugger;
@@ -185,5 +186,67 @@ class BlogController extends Controller
         $this->addFlash('success', 'post.deleted_successfully');
 
         return $this->redirectToRoute('admin_post_index');
+    }
+
+    /*
+    /**
+     * Deletes a Comment entity.
+     *
+     * @Route("{id_post}/{id_comment}/delete", name="admin_comment_delete")
+     * @Method("POST")
+     * @Security("is_granted('delete', comment)")
+     *
+     * The Security annotation value is an expression (if it evaluates to false,
+     * the authorization mechanism will prevent the user accessing this resource).
+
+    public function deleteCommentAction(Request $request, Post $post, Comment $comment)
+    {
+        if (!$this->isCsrfTokenValid('delete', $request->request->get('token'))) {
+            return $this->redirectToRoute('admin_post_index');
+        }
+
+        // Delete the tags associated with this blog post. This is done automatically
+        // by Doctrine, except for SQLite (the database used in this application)
+        // because foreign key support is not enabled by default in SQLite
+        //$post->getTags()->clear();
+
+        $em = $this->getDoctrine()->getManager();
+        $em->remove($post);
+        $em->flush();
+
+        $this->addFlash('success', 'post.deleted_successfully');
+
+        return $this->redirectToRoute('admin_post_index');
+    }*/
+
+    /**
+     * Deletes a Comment entity.
+     *
+     * @Route("/comment/{id}/delete", name="admin_comment_delete")
+     * @Method("POST")
+     *
+     *
+     * The Security annotation value is an expression (if it evaluates to false,
+     * the authorization mechanism will prevent the user accessing this resource).
+     */
+    public function deleteCommentAction(Request $request,Comment $comment)
+    {
+        /*if (!$this->isCsrfTokenValid('delete', $request->request->get('token'))) {
+            return $this->redirectToRoute('admin_post_index');
+        }*/
+
+        // Delete the tags associated with this blog post. This is done automatically
+        // by Doctrine, except for SQLite (the database used in this application)
+        // because foreign key support is not enabled by default in SQLite
+        //$post->getTags()->clear();
+
+        $em = $this->getDoctrine()->getManager();
+        $em->remove($comment);
+        $em->flush();
+
+        $this->addFlash('success', 'comment.deleted_successfully');
+
+        $referer = $request->headers->get('referer');
+        return $this->redirect($referer);
     }
 }

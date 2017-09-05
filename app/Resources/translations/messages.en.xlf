@@ -121,12 +121,24 @@
                 <source>action.delete_post</source>
                 <target>Delete post</target>
             </trans-unit>
+            <trans-unit id="action.delete_comment">
+                <source>action.delete_comment</source>
+                <target>Delete comment</target>
+            </trans-unit>
             <trans-unit id="delete_post_modal.title">
                 <source>delete_post_modal.title</source>
                 <target>Are you sure you want to delete this post?</target>
             </trans-unit>
             <trans-unit id="delete_post_modal.body">
                 <source>delete_post_modal.body</source>
+                <target>This action cannot be undone.</target>
+            </trans-unit>
+            <trans-unit id="delete_comment_modal.title">
+                <source>delete_comment_modal.title</source>
+                <target>Are you sure you want to delete this comment?</target>
+            </trans-unit>
+            <trans-unit id="delete_comment_modal.body">
+                <source>delete_comment_modal.body</source>
                 <target>This action cannot be undone.</target>
             </trans-unit>
             <trans-unit id="label.delete_post">
@@ -295,6 +307,11 @@
             <trans-unit id="post.deleted_successfully">
                 <source>post.deleted_successfully</source>
                 <target>Post deleted successfully!</target>
+            </trans-unit>
+
+            <trans-unit id="comment.deleted_successfully">
+                <source>comment.deleted_successfully</source>
+                <target>Comment deleted successfully!</target>
             </trans-unit>
 
             <trans-unit id="notification.comment_created">
